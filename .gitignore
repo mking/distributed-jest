@@ -1,0 +1,4 @@
+*.tfstate
+.terraform
+matt.pem
+matt.private.log

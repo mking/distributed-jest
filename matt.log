@@ -1,0 +1,13 @@
+# region is a transient parameter only used when creating the AMI.
+packer build worker.json
+
+terraform init # call when you change the backend.
+terraform apply # deploy.
+terraform show # view the running deployment.
+terraform destroy
+
+terraform show includes a lot of details about the live instance that weren't specified in the tf file.
+
+both terraform and packer include provisioners.
+I believe this is strictly so that the image itself can include some provisioning.
+I wish terraform and packer relied on a common provisioning library.

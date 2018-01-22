@@ -1,3 +1,12 @@
+controller
+- I want to download a list of worker nodes up front (without having to query the AWS API).
+- I want to programmatically get instance names.
+- I want to split tests from jest. Should I use the CLI API?
+
+packer vs terraform
+- packer: AMI builder
+- terraform: declarative AWS configuration
+
 yarn test --listTests
 
 retries with jest-junit?
@@ -6,6 +15,7 @@ yarn test
 
 # region is a transient parameter only used when creating the AMI.
 packer build worker.json
+packer validate worker.json
 
 terraform init # call when you change the backend.
 terraform apply # deploy.

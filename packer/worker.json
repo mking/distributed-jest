@@ -5,16 +5,21 @@
       "region": "us-west-2",
       "source_ami": "ami-1ee65166",
       "instance_type": "t2.nano",
-      "ssh_username": "ubuntu",
       "ami_name": "worker {{timestamp}}",
+      "ssh_username": "ubuntu",
       "ssh_keypair_name": "matt",
-      "ssh_private_key_file": "matt.pem"
+      "ssh_private_key_file": "../matt.pem"
     }
   ],
   "provisioners": [
     {
+      "type": "file",
+      "source": "../matt.pem",
+      "destination": "~/.ssh/id_rsa"
+    },
+    {
       "type": "shell",
-      "script": "worker.sh"
+      "script": "./worker.sh"
     }
   ]
 }

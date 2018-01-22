@@ -11,7 +11,11 @@ provider "aws" {
 }
 
 resource "aws_instance" "worker" {
-  ami = "ami-173f826f"
+  ami = "ami-1f279a67"
   instance_type = "t2.nano"
-  count = 10
+  security_groups = ["terraform-worker"]
+  tags = {
+    group = "worker"
+  }
+  count = 2
 }

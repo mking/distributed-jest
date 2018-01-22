@@ -1,4 +1,6 @@
 *.tfstate
 .terraform
+.vscode
 matt.pem
 matt.private.log
+node_modules

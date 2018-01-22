@@ -1,3 +1,9 @@
+yarn test --listTests
+
+retries with jest-junit?
+
+yarn test
+
 # region is a transient parameter only used when creating the AMI.
 packer build worker.json
 
